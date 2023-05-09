@@ -74,9 +74,6 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -129,6 +126,7 @@
         </executions>
       </plugin>
 </plugins>
+     </pluginManagement>
   </build>
 </project>
 
