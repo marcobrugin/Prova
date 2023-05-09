@@ -36,7 +36,12 @@ jobs:
 
       - name: Generate site
         run: mvn jacoco:prepare-agent install jacoco:report
-
+      - name: Log coverage percentage
+        run: |
+          echo "coverage = ${{ steps.jacoco.outputs.coverage}}"
+          echo "branches = ${{ steps.jacoco.outputs.branches}}"
+      - name: Add badges
+        run: git add .github/badges
 
 
       - name: Commit files
