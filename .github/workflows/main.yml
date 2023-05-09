@@ -70,7 +70,7 @@ jobs:
           path: target/site/jacoco/
 
       - name: Codecov
-        uses: coverallsapp/github-action@v2
+        uses: codecov/codecov-action@v3.1.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: target/site/jacoco/jacoco.xml
