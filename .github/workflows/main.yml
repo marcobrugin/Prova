@@ -37,20 +37,7 @@ jobs:
       - name: Generate site
         run: mvn jacoco:prepare-agent install jacoco:report
 
-      - name: Generate JaCoCo Badge
-        id: jacoco
-        uses: cicirello/jacoco-badge-generator@v2.6.1
-        with:
-          generate-branches-badge: true
-          jacoco-csv-file: target/site/jacoco/jacoco.csv
-          badges-directory: .github/badges
 
-      - name: Log coverage percentage
-        run: |
-          echo "coverage = ${{ steps.jacoco.outputs.coverage}}"
-          echo "branches = ${{ steps.jacoco.outputs.branches}}"
-      - name: Add badges
-        run: git add .github/badges
 
       - name: Commit files
         run: |
